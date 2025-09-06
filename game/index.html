@@ -9,28 +9,30 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <nav>
-    <i class="fa-solid fa-house"></i>
-    <i class="fa-solid fa-gamepad"></i>
-  </nav>
-    
-    <div id="wrapper">
-      <h1>Number Guessing Game</h1>
-    <p>Try and guess a random number between 1 and 100.</p>
-    <p>You have 10 attempts to guess the right number.</p>
-    </br>
-        <form class="form">
-            <label for="guessField" id="guess" onclick="showHidden()">Guess a number</label>
-            <input type="text" id="guessField" >
-            <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
-        </form>
-
-        <div class="resultParas">
-            <p >Previous Guesses: <span class="guesses"></span></p>
-            <p >Guesses Remaining: <span class="lastResult">10</span></p>
-            <p class="lowOrHi"></p>
-        </div>
+  <div class="container">
+    <div class="navbar">
+      <i class="fa-solid fa-house"></i>
+      <i class="fa-solid fa-gamepad"></i>
     </div>
+      <div class="wrapper">
+        <h1>Number Guessing Game</h1>
+        <div class="para">
+          <p>Try and guess a random number between 1 and 100.</p>
+          <p>You have 10 attempts to guess the right number.</p>
+        </div>
+          <div class="form">
+              <label for="guessField" id="guess" onclick="showHidden()">Guess a number</label>
+              <input class="inputfield" type="text" id="guessField" >
+              <input type="submit" id="subt" value="Submit guess" class="guessSubmit">
+          </div>
+  
+          <div class="resultParas">
+              <p >Previous Guesses: <span class="guesses"></span></p>
+              <p >Guesses Remaining: <span class="lastResult">10</span></p>
+              <p class="lowOrHi"></p>
+          </div>
+      </div>
+  </div>
     <script src="index.js"></script>
 </body>
 </html>

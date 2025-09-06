@@ -1,30 +1,44 @@
-html {
-  font-family: sans-serif;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-  max-width: 50vw;
-  height: 100vh;
-  margin: 0 auto;
-  background-color: #fff1e6;
+  margin-top: 0;
+  padding: 0;
+
 } 
 
-nav{
+.container{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background-color: #fff1e6;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 0.5rem;
+  gap: 1rem;
+}
+
+.navbar{
   background-color: whitesmoke;
   display: flex;
   justify-content: space-between;
-  border: 1px solid #6096ba;
-  height: 8vh;
-  margin: 7px;
   align-items: center;
-  padding-left: 20px;
-  padding-right: 20px;
+  width: 45vw;
+  min-width: 300px;
+  height: 8vh;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 4px 4px 0.01px rgb(120, 143, 197);
   background-color: #d5cef4;
 }
 
-nav i{
+.navbar i{
   color: rgb(127, 165, 255);
   font-size: 30px;
 }
@@ -39,9 +53,40 @@ nav i{
   padding: 7px;
 }
 
-.guesses {
-  color: white;
-  padding: 7px;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  max-width: 590px;
+  min-height: 400px;
+  color: #2c198b;
+  z-index: 5;
+  overflow: hidden;
+}
+
+
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.para{
+  margin: 5px;
+}
+
+#guessField {
+  display: none;
+  color: #bf8ff5;
+  min-width: 100px;
+  height: 50px;
+  font-size: 30px;
+  border-style: none;
+  margin-top: 25px;
+  border: 4px solid #d4d1faf2;
+  text-align: center;
 }
 
 button {
@@ -72,30 +117,10 @@ button {
   cursor: pointer;
 }
 
-form{
-  margin-top: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-}
-
-#guessField {
-  display: none;
-  color: #bf8ff5;
-  width: 250px;
-  height: 50px;
-  font-size: 30px;
-  border-style: none;
-  margin-top: 25px;
-  border: 4px solid #d4d1faf2;
-  text-align: center;
-}
-
 
 #guess {
-  font-size: 40px;
-  margin-top: auto;
+  font-size:35px;
+  margin: auto;
   padding: 10px;
   color: #006d77;
   border-radius: 8px;
@@ -103,32 +128,112 @@ form{
   border: 2px solid rgb(120, 143, 197);
 }
 
+.inputfield{
+  width: 60%;
+}
+
 .guesses {
   color: #141414;
   font-size: larger;
 }
 
-#wrapper {
-  margin: 0 100px 0 100px;
-  box-sizing: border-box;
-  text-align: center;
-  max-width: 50vw;
-  height: 610px;
-  color: #2c198b;
-  font-size: 25px;
-}
 
 h1 {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: #74B27B;
+  font-size: 30px;
 }
 
 p {
-  font-size: 16px;
+  font-size: 14px;
   text-align: center;
 }
 
-#resultParas{
+.resultParas{
   display: flex;
+  flex-direction: column;
   align-items: center;
+  margin-top: 1rem;
+}
+
+.lowOrHi{
+  margin: 1rem;
+  font-size: medium;
+  color: #bf8ff5;
+}
+
+ @media (min-width: 375px) and (max-width: 425px) {
+  .wrapper{
+    min-height: 200px;
+    min-width: 50vw;
+  }
+
+  #guess{
+    font-size: 25px;
+    padding: auto;
+    border-bottom: 6px;
+    border: 1px solid rgb(120, 143, 197);
+  }
+
+  .inputfield{
+    width: 40%;
+  }
+
+  #subt{
+    width: 150px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 15px;
+    border-style: none;
+    margin-top: 20px;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+
+  p{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 375px) and (min-width:300px){
+  .navbar{
+    width: 30vw;
+  }
+  .wrapper{
+    min-height: 100px;
+    min-width: 35vw;
+  }
+
+  #guess{
+    font-size: 16px;
+    padding: auto;
+    border-bottom: 4px;
+    border: 1px solid rgb(120, 143, 197);
+    margin: 0;
+  }
+
+  .inputfield{
+    width: 30%;
+    height: 20% !important;
+  }
+
+  #subt{
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    font-size: 10px;
+    border-style: none;
+    margin-top: 15px;
+  }
+
+  h1{
+    font-size: 15px;
+  }
+
+  p{
+    font-size: 9px;
+  }
 }
